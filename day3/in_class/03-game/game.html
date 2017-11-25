@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Game</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="page">
+      <header><h1>Let's start the Game!</h1></header>
+      <section class="rules">
+        <div class="rules-detail">
+          <h2>Правила игры:</h2>
+          <p>Принцеса соблазняет самурая, Самурай побеждает дракона, Дракон похищает принцессу</p>
+        </div>
+      </section>
+      <section class="gamezone">
+        <div class="gamecontainer">
+          <div class="playerZone">
+            <div class="bigImage">
+
+              <div id="scorePlayer" class="score">0</div>
+            
+            </div>
+            <div class="desigion">
+              <div class="princess"></div>
+              <div class="samurai"></div>
+              <div class="dragon"></div>
+            </div>
+          </div>
+          <div class="vs">
+            <h2>Vs</h2>
+          </div>
+          <div class="computerZone">
+            <div class="bigImage">
+
+              <div id="scoreComputer" class="score score_right">0</div>
+
+            </div>
+            <div class="description">
+              <button id='go'>Нажмите и сыграйте с компьютером</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="result">
+        <p id='resultId'Ваш результат!</p>
+      </section>
+      
+    </div>
+    <script src='js/script.js'></script>
+  </body>
+</html>

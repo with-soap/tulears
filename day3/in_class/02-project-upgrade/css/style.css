@@ -1,0 +1,128 @@
+@keyframes rotatingEarth {
+	from {
+		transform: rotate(0deg);
+	}
+	
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotatingEarthReverse {
+	from {
+		transform: rotate(360deg);
+	}
+	
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+.page {
+	background-image: url('../img/pattern.jpg');
+}
+
+.monitor {
+	position: relative;
+	display: flex;
+	height: 70vh;
+}
+
+.sun {
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	background-image: url('../img/sun.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.earth {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	margin-left: -150px;
+	width: 300px;
+	height: 300px;
+	background-image: url('../img/earth.png');
+	background-size: 50px;
+	background-position: top right;
+	background-repeat: no-repeat;
+	transition: linear .5s;
+
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: normal;
+	animation-play-state: paused;
+}
+
+.earth.earth-animation {
+	animation-name: rotatingEarth;
+}
+
+.earth.earth-animation-reverse {
+	animation-name: rotatingEarthReverse;
+}
+
+.controls {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 30vh;
+	
+	background-color: rgba(0, 150, 150, 0.5);
+}
+
+.rightArrow,
+.leftArrow,
+.home {
+	width: 100px;
+	height: 100px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.rightArrow {
+	background-image: url('../img/rotate_right_arrow.png');
+}
+
+.leftArrow {
+	background-image: url('../img/rotate_left_arrow.png');
+}
+
+.home {
+	background-image: url('../img/home_icon.png');
+}
+
+.popUp {
+	width: 500px;
+	height: 300px;
+	background-color: white;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: none;
+
+}
+
+.descr {
+	margin: auto;
+}
+
+.close {
+	width: 20px;
+	height: 20px;
+	background-image: url(../img/close.png);
+	background-size: contain;
+	background-position: center;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+	
+}
